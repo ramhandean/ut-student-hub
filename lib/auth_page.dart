@@ -37,7 +37,7 @@ class _AuthPageState extends State<AuthPage> {
           child: Column(children: [
             const Icon(Icons.auto_awesome_mosaic_rounded, size: 60, color: Color(0xFF0A84FF)),
             const SizedBox(height: 15),
-            const Text("UT Assistant", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+            const Text("UT Student Hub", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
             const SizedBox(height: 40),
             TextField(controller: _email, decoration: InputDecoration(hintText: 'Email', filled: true, border: OutlineInputBorder(borderRadius: BorderRadius.circular(15), borderSide: BorderSide.none))),
             const SizedBox(height: 15),
