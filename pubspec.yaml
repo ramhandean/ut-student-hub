@@ -1,4 +1,4 @@
-name: project
+name: ut_student_hub
 description: "Aplikasi pendamping mahasiswa Universitas Terbuka untuk manajemen mata kuliah dan jadwal belajar."
 publish_to: 'none'
 version: 1.0.0+1
@@ -17,6 +17,7 @@ dependencies:
   google_fonts: ^8.0.1
   flutter_inappwebview: ^6.1.5
   url_launcher: ^6.3.0
+  flutter_dotenv: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -25,3 +26,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - .env

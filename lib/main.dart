@@ -4,13 +4,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'theme_manager.dart';
 import 'auth_page.dart';
 import 'main_container.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await dotenv.load(fileName: ".env");
+
   await Supabase.initialize(
-    url: 'https://motkgjoujuncqvljqjdc.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1vdGtnam91anVuY3F2bGpxamRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2OTgyNzksImV4cCI6MjA4NjI3NDI3OX0.HpzQnrTqvFOI4KERZgBOM8VhCU7I_3JI--OIgxYjnX8',
+    url: dotenv.env['SUPABASE_URL'] ?? '',
+    anonKey: dotenv.env['SUPABASE_ANON_KEY'] ?? '',
   );
+
   runApp(const UTSuperApp());
 }
 
