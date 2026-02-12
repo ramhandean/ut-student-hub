@@ -41,17 +41,23 @@ class _UTSuperAppState extends State<UTSuperApp> {
       debugShowCheckedModeBanner: false,
       themeMode: themeManager.themeMode,
       theme: ThemeData(
+        useMaterial3: true,
         brightness: Brightness.light,
-        primaryColor: const Color(0xFF003366),
+        colorSchemeSeed: const Color(0xFF003366),
         scaffoldBackgroundColor: const Color(0xFFF5F7FA),
         textTheme: GoogleFonts.plusJakartaSansTextTheme(Theme.of(context).textTheme),
       ),
+
       darkTheme: ThemeData(
+        useMaterial3: true,
         brightness: Brightness.dark,
-        primaryColor: const Color(0xFF0A84FF),
+        colorSchemeSeed: const Color(0xFF0A84FF),
         scaffoldBackgroundColor: const Color(0xFF000000),
-        textTheme: GoogleFonts.plusJakartaSansTextTheme(Theme.of(context).textTheme.apply(bodyColor: Colors.white)),
+        textTheme: GoogleFonts.plusJakartaSansTextTheme(
+            Theme.of(context).textTheme.apply(bodyColor: Colors.white, displayColor: Colors.white)
+        ),
       ),
+
       home: Supabase.instance.client.auth.currentSession == null
           ? const AuthPage()
           : const MainContainer(),
