@@ -25,8 +25,6 @@
 |---|---|---|
 | ![Dashboard](https://via.placeholder.com/200x400?text=Dashboard+UI) | ![Editor](https://via.placeholder.com/200x400?text=Editor+UI) | ![Portal](https://via.placeholder.com/200x400?text=Portal+UI) |
 
-> **Note:** Upload screenshot asli dari HP kamu ke folder `assets/` dan ganti link di atas untuk tampilan yang lebih menarik.
-
 ## 📦 Instalasi
 
 1. **Clone repository:**
